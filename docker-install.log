@@ -1,0 +1,1000 @@
+  107  zabbix_js
+  108  mysql -e 'DROP DATABASE zabbix'
+  109  mysql -uroot -pLorentz@2020
+  110  mysql -uzabbix -pLorentz@2020 zabbix < schema.sql
+  111  mysql -uzabbix -pLorentz@2020 zabbix < images.sql 
+  112  mysql -uzabbix -pLorentz@2020 zabbix --default-character-set=utf8mb4 zabbix < images.sql 
+  113  mysql -uzabbix -pLorentz@2020 zabbix --default-character-set=utf8mb4 zabbix < data.sql 
+  114  mysql -uroot -pLorentz@2020
+  115  cd ..
+  116  ls
+  117  ./configure --help
+  118  sudo ./configure --help
+  119  yum install zabbix-server-mysql zabbix-frontend-php
+  120  yum install zabbix-agent
+  121  sudo nano /etc/zabbix/zabbix_server.conf
+  122  whereis zabbix
+  123  zabbix_server
+  124  sudo sh -c "openssl rand -hex 32 > /etc/zabbix/zabbix_agentd.psk"
+  125  cat /etc/zabbix/zabbix_agentd.psk
+  126  sudo nano /etc/zabbix/zabbix_agentd.conf
+  127  cd zabbix/
+  128  cd conf
+  129  ls
+  130  cp . /etc/zabbix/ -R
+  131  ls /etc/zabbix
+  132  cd ~
+  133  cd zabbix/
+  134  history 
+  135  history > install.log
+  136  ls
+  137  npm
+  138  systemctl start zabbix-agent
+  139  zabbix_server
+  140  mkdir /var/log/zabbixsrv/
+  141  tail /var/log/zabbixsrv/zabbix_server.log
+  142  ls /var/log
+  143  ls /var/log/zabbixsrv/
+  144  zabbix_server
+  145  rpm -Uvh https://repo.zabbix.com/zabbix/4.2/rhel/7/x86_64/zabbix-release-4.2-2.el7.noarch.rpm
+  146  yum-config-manager --enable rhel-7-server-optional-rpms
+  147  yum install yum-config-manager
+  148  yum install yum-tools
+  149  yum install zabbix-proxy-mysql
+  150  yum install zabbix-server-mysql
+  151  cat /etc/zabbix/zabbix_server.conf
+  152  nano /etc/zabbix/zabbix_server.conf
+  153  nano /etc/yum.repos.d/epel.repo
+  154  rpm -Uvh https://repo.zabbix.com/zabbix/6.4/rhel/9/x86_64/zabbix-release-6.4-1.el9.noarch.rpm
+  155  ls
+  156  wget https://cdn.zabbix.com/zabbix/sources/stable/6.4/zabbix-6.4.0.tar.gz
+  157  $ tar -zxvf zabbix-6.4.0.tar.gz
+  158  $ tar -zxvf zabbix-*
+  159  ls
+  160  $ tar -zxvf zabbix-6.4.0.tar.gz
+  161  $ tar -zxvf ./zabbix-6.4.0.tar.gz
+  162  ls
+  163  $ tar -zxvf zabbix-6.4.0.tar.gz 
+  164  $ tar -zxvf zabbix-6.4.0.tar.gz ./zabbix
+  165  yum install tar
+  166  hostname -I
+  167  yum update
+  168  yum install zabbix
+  169  groupadd --system zabbix
+  170  useradd --system -g zabbix -d /usr/lib/zabbix -s /sbin/nologin -c "Zabbix Monitoring System" zabbix
+  171  addgroup --system --quiet zabbix
+  172  mkdir -m u=rwx,g=rwx,o= -p /usr/lib/zabbix
+  173  chown zabbix:zabbix /usr/lib/zabbix
+  174  export CFLAGS="-std=gnu99"
+  175  whereis zabbix
+  176  ls /usr/lib/zabbix
+  177  ls /etc/zabbix
+  178  cd /opt/zabbix/
+  179  ls
+  180  ./configure --help
+  181  sudo ./configure --help
+  182  ls
+  183  ./configure --enable-server --enable-agent --with-mysql --enable-ipv6 --with-net-snmp --with-libcurl --with-libxml2 --with-openipmi
+  184  ls -l
+  185  make
+  186  cd ~
+  187  git clone https://git.zabbix.com/scm/zbx/zabbix.git
+  188  git clone https://github.com/zabbix/zabbix.git
+  189  netstat -tulpn
+  190  wscat -c "ws://192.168.1.10:8088/ari/events?api_key=asterisk:asterisk&app=API-REST"
+  191  npm install wscat -g
+  192  ls
+  193  mssql
+  194  mssql-cli
+  195  npm -v
+  196  node -v
+  197  git clone https://github.com/boiceam/AsteriskProxy.git
+  198  hostname -I
+  199  ls
+  200  yum update
+  201  amportal stop
+  202  reboot
+  203  ls
+  204  np -v
+  205  npm -v
+  206  node -v
+  207  git clone https://github.com/boiceam/AsteriskProxy.git
+  208  ping 8.8.8.8
+  209  hostname -I
+  210  ping 8.8.8.8
+  211  cd AsteriskProxy/
+  212  npm install forever -g
+  213  cd ..
+  214  /etc/init.d/network stop
+  215  yum update
+  216  ping 8.8.8.8
+  217  hostname -I
+  218  asterisk -vvvvr
+  219  hostname -I
+  220  amportal restart
+  221  netstat -tulp
+  222  netstat -tunlp
+  223  whereis asterisk
+  224  ls /usr/include/asterisk
+  225  whereis asterisk
+  226  ls /usr/lib64/asterisk/
+  227  ls /usr/lib64/asterisk/modules/
+  228  whereis asterisk
+  229  ls /usr/sbin/asterisk 
+  230  fail2ban-server stop
+  231  systemctl network start
+  232  systemctl start network
+  233  systemctl status network
+  234  ping 8.8.8.8
+  235  amportal restart
+  236  ping 8.8.8.8
+  237  hostname -I
+  238  nano /etc/sysconfig/network-scripts/ifcfg-eth0 
+  239  systemctl stop network
+  240  systemctl start network
+  241  amportal restart
+  242  hostname -I
+  243  reboot
+  244  yum update
+  245  ping 8.8.8.8
+  246  ls
+  247  npm install -g forever
+  248  cd AsteriskProxy/
+  249  bash ./astproxy 
+  250  npm i
+  251  npm audit
+  252  npmm run start
+  253  npm run start
+  254  nano /etc/sysconfig/network-scripts/ifcfg-eth0 
+  255  reboot
+  256  cd /var/www/html/
+  257  git clone https://github.com/gmaruzz/saraphone.git phone
+  258  git clone https://github.com/gmaruzz/saraphone.git  phone
+  259  ping 8.8.8.8
+  260  hostname -I
+  261  ping 8.8.8.8
+  262  fail2ban-server stop
+  263  ping 8.8.8.8
+  264  amportal stop
+  265  shutdown now
+  266  ping 8.8.8.8
+  267  hostname -I
+  268  ping 8.8.8.8
+  269  amportal stop
+  270  reboot
+  271  ping 8.8.8.8
+  272  fail2ban-server stop
+  273  ping 8.8.8.8
+  274  /etc/init.d/network start
+  275  /etc/init.d/network stop
+  276  /etc/init.d/network start
+  277  ping 8.8.8.8
+  278  ifconfig
+  279  cd /etc/sysconfig/network-scripts/
+  280  ls
+  281  cp ./ifcfg-eth0 ./bkp.ifcfg-eth0
+  282  nano ./ifcfg-eth0 
+  283  /etc/init.d/network stop
+  284  /etc/init.d/network start
+  285  ping 8.8.8.8
+  286  ifconfig
+  287  ls
+  288  cd  ~
+  289  cd ~
+  290  hostname -I
+  291  ping 8.8.8.8
+  292  hostname -I
+  293  ping 8.8.8.8
+  294  hostname -I
+  295  amportal restart
+  296  hostname -I
+  297  /etc/init.d/network stop
+  298  /etc/init.d/network start
+  299  hostname -I
+  300  nano  ./ifcfg-eth0 ./bkp.ifcfg-eth0
+  301  nano  ./ifcfg-eth0 
+  302  amportal stop
+  303  reboot
+  304  git clone https://github.com/roramirez/qpanel.git
+  305  cd qpanel/
+  306  nano /etc/asterisk/manager.conf 
+  307  nano /etc/asterisk/manager_custom.conf 
+  308  nano /etc/asterisk/manager.conf 
+  309  nano /etc/asterisk/manager_custom.conf 
+  310  pip3 install -r requirements.txt
+  311  yum install python3 -y
+  312  pip3 install -r requirements.txt
+  313  cp samples/config.ini-dist config.ini
+  314   pybabel compile -d qpanel/translations
+  315  python3 app.py
+  316  yum install swig 
+  317  amportal restart
+  318  asterisk -vvvvr
+  319  python3 app.py
+  320  nano /etc/asterisk/manager.conf
+  321  nano /etc/asterisk/manager_custom.conf 
+  322  amportal restart
+  323  asterisk -vvvrc
+  324  amportal restart
+  325  asterisk -vvvrc
+  326  amportal restart
+  327  asterisk -vvvrc
+  328  amportal restart
+  329  asterisk -vvvrc
+  330  ifconfig eth0:0 192.168.1.10 netmask 255.255.255.0 up
+  331  nano /etc/sysconfig/network-scripts/ifcfg-eth0 
+  332  /etc/init.d/network restart
+  333  hostname -I
+  334  ping 8.8.8.8
+  335  nano /etc/sysconfig/network-scripts/ifcfg-eth0 d
+  336  ping 8.8.8.8
+  337  amportal restart
+  338  ping 8.8.8.8
+  339  /etc/init.d/network stop
+  340  /etc/init.d/network start
+  341  ping 8.8.8.8
+  342  hostname -I
+  343  amportal restart[A
+  344  fail2ban-server stop
+  345  hostname -I
+  346  /etc/init.d/network stop
+  347  /etc/init.d/network start
+  348  hostname -I
+  349  ifconfig
+  350  amportal stop
+  351  shutdown now
+  352  amportal stop
+  353  shutdown now
+  354  amportal stop
+  355  shutdown now
+  356  hostname -I
+  357  ping 8.8.8.8
+  358  asterisk -rvvvvvc
+  359  ls
+  360  cd qpanel/
+  361  python3 app.py 
+  362  ping 8.8.8.8
+  363  cd ~
+  364  clear
+  365  arterisk -cvvvvr
+  366  asterisk -cvvvvr
+  367  amportal stop
+  368  shutdown now
+  369  nano /etc/asterisk/sip_general_custom.conf
+  370  nano /etc/asterisk/sip_general.conf
+  371  nano /etc/asterisk/sip_general_custom.conf
+  372  nano /etc/asterisk/sip_general.conf
+  373  cd ~
+  374  du
+  375  cd AsteriskProxy/
+  376  node server.js 
+  377  amportal restart
+  378  node server.js 
+  379  cd ..
+  380  cd qpanel/
+  381  python3 app.py 
+  382  yum install gotop
+  383   npm install gtop -g
+  384  gtop
+  385  cargo
+  386  sudo dnf copr enable atim/bottom -y
+  387  dnf
+  388  sudo dnf install bottom
+  389  yum install cargo 
+  390  snap
+  391  dnf copr enable atim/bottom -y
+  392  dnf copr enable atim/bottom -ydnf install bottom
+  393  dnf install bottom
+  394  yum remove zabbix
+  395  yum remove zabbix*
+  396  cd ~
+  397  ls
+  398  rm -f ./zabbix/
+  399  rm -r -f ./zabbix/
+  400  ls
+  401  mv qpanel/ /opt/
+  402  cd /opt
+  403  ls
+  404  cd qpanel/
+  405  python3 app.py 
+  406  rpm
+  407  wget https://github.com/cjbassi/gotop/releases/download/3.0.0/gotop_3.0.0_linux_amd64.rpm
+  408  sudo rpm -ivh gotop_3.0.0_linux_amd64.rpm
+  409  gotop
+  410  python3 app.py 
+  411  cd /etc/asterisk
+  412  yum install git make docker docker-compose -y
+  413  systemctl enable --now docker
+  414  cd ~
+  415  git clone https://github.com/beneditomarques/voip-carrier-simulator.git
+  416  cd voip-carrier-simulator
+  417  echo "127.0.0.1 sip.operadora1.com.br" >> /etc/hosts
+  418  echo "127.0.0.1 iax.operadora2.com.br" >> /etc/hosts
+  419  make build ver=1.0.0
+  420  make up
+  421  amportal restart
+  422  asterisk -vvvvvvvvr
+  423  ping 8.8.8.8
+  424  amportal stop
+  425  reboot
+  426  amportal stop
+  427  amportal start
+  428  amportal stop
+  429  htop
+  430  reboot
+  431  ip a
+  432  systemctl docker status
+  433  systemctl status docker
+  434  systemctl disable docker
+  435  systemctl status docker
+  436  systemctl stop docker
+  437  systemctl status docker
+  438  amportal stop
+  439  amportal restart
+  440  fail2ban-server stop
+  441  htop
+  442  gotop
+  443  gtop
+  444  fail2ban-server stop
+  445  amportal restart
+  446  amportal stop
+  447  shutdown now
+  448  cd /opt/qpanel/
+  449  ls
+  450  python3 app.py 
+  451  asterisk -vvvvvvvr
+  452  amportal restart
+  453  node -v
+  454  htop
+  455  fail2ban-server stop
+  456  php -v
+  457  asterisk    -vvvvvr
+  458  amportal restart
+  459  asterisk    -vvvvvr
+  460  npm clear cache
+  461  yarn
+  462  nmp --help
+  463  npm --help
+  464  npm cache clear
+  465  npm cache c
+  466  npm cache 
+  467  npm --cache 
+  468  npm help 
+  469  npm -l
+  470  npm cache clean --force
+  471  ls
+  472  hostname -I
+  473  cdd issabel/
+  474  cd issabel
+  475  ls
+  476  yum update IssabelPBX
+  477  fail2ban-server stop
+  478  yum update IssabelPBX
+  479  yum update
+  480  yum update IssablPBX
+  481  cd /var/www/html/
+  482  git clone https://github.com/InnovateAsterisk/Browser-Phone.git
+  483  ls
+  484  arterisk -vvvvvvvr
+  485  asterisk -vvvvvvvr
+  486  mssql-cli -S 192.168.1.5 -d Attender_CRM -U sa -P f@b10sentapua
+  487  curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/mssql-release.repo
+  488  sudo yum install -y unixODBC unixODBC-devel
+  489  ACCEPT_EULA=Y yum install msodbcsql
+  490  yum install php-mssql
+  491  yum install php-sqlsrv --skip-broken
+  492  systemctl restart httpd.service
+  493  yum install -y mssql-tools
+  494  php -i | grep sql
+  495  curl https://raw.githubusercontent.com/dvershinin/apt-get-centos/master/apt-get.sh -o /usr/local/bin/apt-get
+  496  chmod 0755 /usr/local/bin/apt-get
+  497  sudo apt upgrade --with-new-pkgs 
+  498  sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+  499  cd ~
+  500  ls
+  501  cd /tmp/
+  502  du
+  503  ls /opt/
+  504  cd /opt/
+  505  du
+  506  cd ..
+  507  cd /var/
+  508  du
+  509  docker ps
+  510  systemct docker start
+  511  systemct start docker
+  512  whereis  docker
+  513  service docker status
+  514  service docker start
+  515  docker ps
+  516  docker help
+  517  docker ps
+  518  docker kill 9accfe7fdfd6
+  519  docker ps
+  520  service docker stop
+  521  cd /www/
+  522  du
+  523  disk
+  524  dua
+  525  du -help
+  526  du --help
+  527  du -s
+  528  pecl install dua
+  529  pecl dua install
+  530  pecl help
+  531  pecl install dua
+  532  du -h
+  533  du -c
+  534  du -h -c
+  535  du -hc
+  536   sudo du -hc --max-depth=1 /var
+  537  cd log
+  538  dos
+  539   sudo du -hc --max-depth=1 /var/log
+  540   sudo du -hc --max-depth=1 /var/log/httpd/
+  541   sudo du -h --max-depth=1 /var/log/httpd/
+  542   sudo du --max-depth=1 /var/log/httpd/
+  543   sudo du -c /var/log/httpd/
+  544  cd /var/log/httpd
+  545  du
+  546   sudo du -c /var/
+  547   sudo du -hc /var/
+  548   sudo du -hc --max-depth=2 /var/log/httpd/
+  549   sudo du -hc --max-depth=1 /var/log/httpd/
+  550   sudo du -hc --max-depth=2 /var/
+  551  cd /var/lib/
+  552   sudo du -hc --max-depth=2 /var/lib
+  553   sudo du -hc --max-depth=2 /var/lib/asterisk/sounds
+  554   sudo du -hc --max-depth=2 /var/lib/
+  555   sudo du -hc --max-depth=1 /var/lib/
+  556  sudo yum install tree
+  557  tree -d -h
+  558  tree /var
+  559  sudo yum install ncdu
+  560  ncdu /var
+  561  docker image prune
+  562  This will remove all dangling images.
+  563  Are you sure you want to continue? [y/N] yy
+  564  docker image prune
+  565  service docker start
+  566  docker image prune
+  567  docker container prune
+  568  This will remove all stopped containers.
+  569  Are you sure you want to continue? [y/N] yy
+  570  docker system prune
+  571  This will remove:
+  572          - all stopped containers
+  573          - all networks not used by at least one container
+  574          - all dangling images
+  575          - all build cache
+  576  Are you sure you want to continue? [y/N] yy
+  577  ncdu /var
+  578  docker image prune --all
+  579  ncdu /var
+  580  hostname -I
+  581  netstat -tulp
+  582  yum remove docker
+  583  ncdu /var
+  584  yum remove docker
+  585  de docker
+  586  ncdu /var
+  587  systemctl stop docker
+  588  rm -rf /var/lib/docker
+  589  ncdu /var
+  590  ncdu /
+  591  amportal stop
+  592  reboot
+  593  cd /opt/
+  594  cd qpanel/
+  595  whereis python3
+  596  /usr/bin/python3 app.py 
+  597  cd /opt/qpanel/
+  598  touch init.sh
+  599  chmod +x ./init.sh 
+  600  nano ./init.sh 
+  601  ls
+  602  amportal stop
+  603  shutdown now
+  604  node -v
+  605  php -v
+  606  sudo systemctl restart httpd
+  607  sudo systemctl status httpd
+  608  sudo systemctl stop httpd
+  609  sudo systemctl start httpd
+  610  sudo systemctl restart httpd
+  611  tail /var/spool/mail/root
+  612  rpm -Uvh https://repo.zabbix.com/zabbix/6.0/rhel/7/x86_64/zabbix-release-6.0-4.el7.noarch.rpm
+  613  yum install zabbix-proxy-mysql zabbix-sql-scripts zabbix-selinux-policy
+  614  ls
+  615  mysql -uroot -p
+  616  cat /usr/share/zabbix-sql-scripts/mysql/proxy.sql | mysql --default-character-set=utf8mb4 -uzabbix -p zabbix_proxy
+  617  cd /usr/share/zabbix-sql-scripts/mysql/
+  618  mysql -uroot -p
+  619  quit;
+  620  whereis zabbix
+  621  systemctl restart zabbix-proxy
+  622  systemctl enable zabbix-proxy
+  623  systemctl restart zabbix-proxy
+  624  systemctl start zabbix-proxy
+  625  journalctl -xe
+  626  ls /run/zabbix/zabbix_proxy.pid
+  627  ls /run/zabbix/
+  628  touch /run/zabbix/zabbix_proxy.pid
+  629  chmod  /run/zabbix/zabbix_proxy.pid
+  630  chmod 777 /run/zabbix/zabbix_proxy.pid
+  631  ls /run/zabbix/
+  632  touch /run/zabbix/zabbix_proxy.pid
+  633  chmod 777 /run/zabbix/zabbix_proxy.pid
+  634  ls /run/zabbix/
+  635  systemctl start zabbix-proxy
+  636  systemctl status zabbix-proxy
+  637  journalctl -xe
+  638  cd /var/run/zabbix/
+  639  systemctl status zabbix-proxy
+  640  systemctl start zabbix-proxy
+  641  systemctl status zabbix-proxy.service -l
+  642  systemctl disable zabbix-proxy.service 
+  643  nano /etc/zabbix_agentd.conf
+  644  mysql -uzabbix -p
+  645  nano /etc/zabbix_server.conf
+  646  systemctl enable zabbix-proxy.service 
+  647  systemctl start zabbix-proxy
+  648  journalctl -xe
+  649  systemctl disable zabbix-proxy.service 
+  650  systemctl start zabbix-proxy
+  651  journalctl -xe
+  652  tail "/tmp/zabbix_proxy.log"
+  653  systemctl start zabbix-proxy
+  654  systemctl enable zabbix-proxy.service 
+  655  systemctl status zabbix-proxy
+  656  systemctl start zabbix-proxy
+  657  systemctl disable zabbix-proxy.service 
+  658  cd ~~
+  659  cd ~
+  660  wget https://raw.githubusercontent.com/hestiacp/hestiacp/release/install/hst-install.sh
+  661  yum install install ca-certificates
+  662  ls
+  663  chmod +x ./hst-install.sh
+  664   ./hst-install.sh
+  665  cd /usr/src
+  666  wget http://download.asternic.net/asternic-stats-1.8.tgz
+  667  cd /usr/src
+  668  wget http://download.asternic.net/asternic-stats-1.8.tgz
+  669  tar zvxf asternic-stats-1.8.tgz
+  670  cd asternic-stats
+  671  mysqladmin -u root -p create qstatslite
+  672  mysql -u root -p qstatslite < sql/qstats.sql
+  673  mysql -u root -p -e "CREATE USER 'qstatsliteuser'@'localhost' IDENTIFIED by 'somepassword'"
+  674  mv /usr/src/asternic-stats/html /var/www/html/queue-stats
+  675  mv /usr/src/asternic-stats/parselog /usr/local/parseloglite
+  676  cd /var/www/html/queue-stats/
+  677  /usr/local/parseloglite/
+  678  cd /usr/local/parseloglite/
+  679  tail -n 30 "/var/log/httpd/ssl_error_log"
+  680  fail2ban-server stop
+  681  ping 192.168.1.5
+  682  amportal stop
+  683  reboot
+  684  ping 192.168.1.5
+  685  tail /var/spool/mail/root 
+  686  amportal restart
+  687  ping 192.168.1.5
+  688  amportal stop
+  689  shutdown now
+  690  asterisk -vvvvvvvr
+  691  date
+  692  php "/var/www/html/queue_log.php"
+  693  ping 192.168.1.5
+  694  date
+  695  amportal stop
+  696  reboot
+  697  amportal stop
+  698  shutdown now
+  699  mkdir /var/www/html/_sys
+  700  cd /var/www/html/_sys
+  701  cd ..
+  702  cp queue_log.php ./_sys/
+  703  date
+  704  ping 192.168.1.5
+  705  amportal stop
+  706  reboot
+  707  asterisk -rx 'sip show peers'
+  708  asterisk -rx 'sip show peers'asterisk -rx 'sip show peers'asterisk -rx'core show channels concise'
+  709  asterisk -rx'core show channels concise'
+  710  asterisk -rx "core show channels verbose"
+  711  asterisk -rx 'queue show'
+  712  asterisk -rx "core reload"
+  713  amprtal restart
+  714  amportal restart
+  715  asterisk -rx "meetme list"
+  716  cd /var/www/html/
+  717  cd _sys
+  718  ls
+  719  cd /usr/src/
+  720  "/usr/src/asternic-stats/"
+  721  tar zvxf asternic-stats-1.8.tgz
+  722  mysqladmin -u root -p create qstatslite
+  723  php "/usr/src/asternic-stats/parselog/parselog.php"
+  724  cd /var/www/html/statsq/
+  725  ln -s "/usr/src/asternic-stats/parselog/parselog.php" parselog.php
+  726  ls
+  727  /usr/sbin/asterisk -rx'sip show peers'|grep online|awk '{print $12}'|cut -d'/' -f1
+  728  /usr/sbin/asterisk -rx'sip show peers'|grep online|awk '{print $5}'|cut -d'/' -f1
+  729  /usr/sbin/asterisk -rx'pjsip show endpoints'|grep Unvai|wc -l
+  730  /usr/sbin/asterisk -rx'pjsip show endpoints'|grep Avail|wc -l
+  731  /usr/sbin/asterisk -rx'iax2 show peers'|grep online|awk '{print $6}'|cut -d'/' -f1
+  732  /usr/sbin/asterisk -rx'iax2 show peers'|grep online|awk '{print $4}'|sed -r 's/[\[]+//g'|cut -d'/' -f1
+  733  /usr/sbin/asterisk -rx'sip show peers'|grep online|awk '{print $12}'|cut -d'/' -f1
+  734  /usr/sbin/asterisk -rx'sip show peers'|grep online|awk '{print $5}'|cut -d'/' -f1
+  735  /usr/sbin/asterisk -rx'sip show peers'|grep online
+  736  /usr/sbin/asterisk -rx'sip show peers'|grep offline
+  737  /usr/sbin/asterisk -rx'sip show peers'
+  738  /usr/sbin/asterisk -rx'sip show peers'|grep offline
+  739  /usr/sbin/asterisk -rx'module show like chan_pjsip'
+  740  /usr/sbin/asterisk -rx'show channels'
+  741  /usr/sbin/asterisk -rx'sip show peers'|
+  742  /usr/sbin/asterisk -rx'sip show peers'
+  743  /usr/sbin/asterisk -rx'sip show peers'verbosity
+  744  /usr/sbin/asterisk -rx'sip show peers verbosity'
+  745  sip show peers verbosity
+  746  /usr/sbin/asterisk -rx'sip show peers'
+  747  cd "/var/www/html/_sys/"
+  748  ./ami_agent_client.sh sip
+  749  chmod +x ./ami_agent_client.sh 
+  750  chmod +x ./ami_agent_server.sh 
+  751  ./ami_agent_client.sh sip
+  752  bash ./ami_agent_client.sh sip
+  753  ./ami_agent_client.sh sip
+  754  sed -i 's/\r$//' ./ami_agent_client.sh
+  755  sed -i 's/\r$//' ./ami_agent_server.sh 
+  756  ./ami_agent_client.sh sip
+  757  ./ami_agent_client.sh sip offline
+  758  mkdir /usr/src/astguiclient
+  759  cd /usr/src/astguiclient
+  760  wget http://internap.dl.sourceforge.net/sourceforge/astguiclient/astguiclient_2.2.0.zip
+  761  wget https://sourceforge.net/projects/astguiclient/files/astguiclient-2.14-854a_svn-rev-3596.zip/download
+  762  ls
+  763  cd download 
+  764  unzip download 
+  765  ls
+  766  cd 2022-04-30/
+  767  ls
+  768  perl install.pl
+  769  ls
+  770  cd..
+  771  cd ..
+  772  ls
+  773  perl "/usr/src/astguiclient/2022-04-30/install.pl"
+  774  cd /var/www/html/
+  775  git clone https://github.com/bfrigon/yaam.git
+  776  cd yaam/
+  777  ls
+  778  cd setup/
+  779  pwd
+  780  cd ..
+  781  cd root/
+  782  mkdir cache
+  783  chmod 775 ./cache/
+  784  cp "/var/www/html/yaam/setup/yaam.conf" /etc/
+  785  tail /var/log/asterisk/messages
+  786  tail /var/log/syslog
+  787  tail /var/log/syslog/
+  788  ls /var/log/syslog/
+  789  mkdir /var/log/syslog
+  790  rm -rf /var/log/syslog
+  791  touch /var/log/syslog
+  792  tail /var/log/mysql/error
+  793  chown asterisk:asterisk "/var/www/html/yaam/root/"
+  794  chown -R asterisk:asterisk "/var/www/html/yaam/root/"
+  795  mv /etc/yaam.conf /etc/asterisk/yaam.conf
+  796  cat /etc/asterisk/yaam.conf
+  797  tail "/var/log/asterisk/full"
+  798  tail "/var/log/asterisk/messages"
+  799  tail "/var/log/messages"
+  800  tail "/var/log/httpd/ssl_error_log"
+  801  tail "/var/log/messages"
+  802  tail "/var/log/cron"
+  803  cat "/var/www/html/yaam/root/cache/6fcfe3d90cb18f8082fd8bf0bb6a2f06.php"
+  804  touch /var/log/auth
+  805  chmod 755 /var/log/auth
+  806  tail "/var/log/messages"
+  807  systemctl status amazon-ssm-agent
+  808  systemctl stop amazon-ssm-agent
+  809  tail "/var/log/httpd/ssl_access_log"
+  810  tail "/var/log/httpd/ssl_request_log"
+  811  tail "/var/log/httpd/access_log"
+  812  tail "/var/log/httpd/ssl_error_log"
+  813  tail "/var/log/secure"
+  814  asterisk -rx'core show channels concise' | cut -d '!' -f1,7,12
+  815  asterisk -rx'core show pierss concise' | cut -d '!' -f1,7,12
+  816  asterisk -rx'core show piers concise' | cut -d '!' -f1,7,12
+  817  asterisk -rx'core show piers' 
+  818  asterisk -rx'core show pieers' 
+  819  asterisk -rx'core show peers' 
+  820  asterisk -rx'core show pears' 
+  821  asterisk -rx'core show peers' 
+  822  asterisk -rx'core show peer' 
+  823  asterisk -rx'sip show peers concise' 
+  824  asterisk -rx'sip show peers' 
+  825  tail "/var/log/httpd/ssl_error_log"
+  826  cp "/var/www/html/_sys/peers.php" "/var/www/html/_sys/peerspanel.php"
+  827  asterisk -rx'sip show peers' 
+  828  asterisk -rx'core show channels concise' | cut -d '!' -f1,7,12
+  829  asterisk -rx'core show channels concise' 
+  830  asterisk -rx'core show channels' 
+  831  cd /var/www/html/_sys/
+  832  php channels.php 
+  833  asterisk -vvvvvvvvvr
+  834  fail2ban-server stop
+  835  amportal stop
+  836  shutdown now
+  837  ping 192.168.1.5
+  838  amportal restart
+  839  sudo su -
+  840  sudo su -
+  841  cd "/var/www/html/_sys/"
+  842  php channels.php 
+  843  php getchannels.php 
+  844  php channels.php?action=all
+  845  asterisk -rx'core show channels concise' | cut -d '!' -f1,7,12
+  846  php channels.php?action=all
+  847  php channels.php
+  848  php getchannels.php 
+  849  php channels.php?action=json
+  850  php channels.php json
+  851  php channels.php?action=json
+  852  php channels.php
+  853  php getchannels.php
+  854   cp "/var/www/html/_sys/getchannels.php" "/var/www/html/_sys/getchannelsd.php"
+  855  php getchannelsd.php
+  856  asterisk -rx 'sip show peers'
+  857  asterisk -rx 'pjsip show peers'
+  858  asterisk -vvvvvvr
+  859  tail "/var/log/asterisk/full"
+  860  tail "/var/log/asterisk/messages"
+  861  tail "/var/log/asterisk/queue_log"
+  862  php getchannelsd.php
+  863  cd /var/www/html/_sys/
+  864  php getchannelsd.php 
+  865  php getchannels.php 
+  866  php getpeerspanel.php 
+  867  php getchannels.php 
+  868  php getchannelsd.php 
+  869  php getchannels.php 
+  870  php getchannelsd.php 
+  871  asterisk -rx 'sip show peers'
+  872  asterisk -rx'core show channels concise' | cut -d '!' -f1,7,12
+  873  asterisk -rx'core show channels concise'
+  874  php getchannelsd.php 
+  875  asterisk -rx'core show channels concise'
+  876  asterisk -rx'core show channels concise' | cut -d '!' -f1,7,12
+  877  asterisk -rx'core show channels concise'
+  878  asterisk -rx'core show channels'
+  879  php getchannelsd.php 
+  880  php getchannels.php 
+  881  php getchannelsd.php 
+  882  asterisk -rx'core show channels'
+  883  php getchannelsd.php 
+  884  asterisk -rx'core show channels'
+  885  fail2ban-server stop
+  886  amportal stop
+  887  shutdown now
+  888  fail2ban-server stop
+  889  amportal stop
+  890  shutdown now
+  891  asterisk -rx'core show channels'
+  892  fail2ban-server stop
+  893  amportal stop
+  894  shutdown now
+  895  amportal stop
+  896  shutdown now
+  897  fail2ban-server stop
+  898  amportal stop
+  899  shutdown now
+  900  fail2ban-server stop
+  901  amportal restart
+  902  ping 195.168.1.5
+  903  amportal stop
+  904  ping 195.168.1.5
+  905  reboot
+  906  fail2ban-server stop
+  907  ping 192.168.1.5
+  908  shutdown now
+  909  fail2ban-server stop
+  910  amportal stop
+  911  shutdown now
+  912  fail2ban-server stop
+  913  amportal stop
+  914  shutdown now
+  915  fail2ban-server stop
+  916  amportal stop
+  917  shutdown now
+  918  asterisk -vvvvvvvvvr
+  919  asterisk -rx 'core shor peers'
+  920  asterisk -rx 'core show peers'
+  921  cat "/var/www/html/_sys/getpeerspanel.php"s'
+  922  cat "/var/www/html/_sys/getpeerspanel.php"
+  923  asterisk -rx 'sip show peers'
+  924  asterisk -rx 'sip show peer 100'
+  925  asterisk -rx 'sip show peer 100' > 100pausa.log
+  926  asterisk -rx 'sip show peer 100' > 100free.log
+  927  pwd
+  928  cd /root
+  929  ls
+  930  asterisk -rx 'sip show peer 100'
+  931  asterisk -rx 'sip show channels'
+  932  ping 192.168.1.5
+  933  amportal stop
+  934  shutdown now
+  935  fail2ban-server stop
+  936  ping 192.168.1.5
+  937  reboot
+  938  ping 192.168.1.5
+  939  shutdown now
+  940  fail2ban-server stop
+  941  ping 192.168.1.5
+  942  amportal  stop
+  943  shutdown now
+  944  fail2ban-server stop
+  945  amportal stop
+  946  shutdown now
+  947  tail "/var/log/httpd/ssl_error_log"
+  948  tail n -30 "/var/log/httpd/ssl_error_log"
+  949  tail l -30 "/var/log/httpd/ssl_error_log"
+  950  tail -l -30 "/var/log/httpd/ssl_error_log"
+  951  tail -n 30 "/var/log/httpd/ssl_error_log"
+  952  fail2ban-server stop
+  953  ping 192.168.1.5
+  954  amportal stop
+  955  shutdown now
+  956  amportal stop
+  957  shutdown now
+  958  systemctl restart apache2
+  959  systemctl apache2 restart
+  960  systemctl restart httpd
+  961  fail2ban-server stop
+  962  amportal stop
+  963  shutdown now
+  964  fail2ban-server stop
+  965  amportal stop
+  966  shutdown now
+  967  fail2ban-server stop
+  968  amportall stop
+  969  amportal stop
+  970  shutdown now
+  971  systemctl httpd
+  972  systemctl restart httpd
+  973  fail2ban-server stop
+  974  amportal stop
+  975  shutdown now
+  976  systemctl restart httpd
+  977  fail2ban-server stop
+  978  amportal stop
+  979  shutdown now
+  980  fail2ban-server stop
+  981  amportal stop
+  982  shutdown now
+  983  amportal stop
+  984  shutdown now
+  985  amiws
+  986  fail2ban-server stop
+  987  amportal stop
+  988  shutdown now
+  989  fail2ban-server stop
+  990  amportal stop
+  991  shutdown now
+  992  fail2ban-server stop
+  993  amportal stop
+  994  shutdown now
+  995  amportal stop
+  996  shutdown now
+  997  wget -O /tmp/netdata-kickstart.sh https://my-netdata.io/kickstart.sh && sh /tmp/netdata-kickstart.sh --nightly-channel --claim-token _3Su6hPjOo_K8aP0ascscOlZI3SZAKjql4LlDdWASfy4z_bCAPwNYt-MqnwWa4MSrwCQq7Ndo27feWpgoOtOgHy7WggYn_N3RyMpAahOermMxgHq8n5skIqybjW13RIi56zaRNA --claim-rooms 351b5656-92df-4335-9959-d16a9616a763 --claim-url https://app.netdata.cloud
+  998  amportal stop
+  999  shutdown now
+ 1000  git
+ 1001  cd /opt/
+ 1002  ls
+ 1003  git clone https://github.com/megatronix-lorentz/lorentz-docker.git
+ 1004  cd lorentz-docker/
+ 1005  docker
+ 1006  ls
+ 1007  cp sample.env .env
+ 1008  ls
+ 1009  docker-compose up -d
+ 1010  systemctl start docker
+ 1011  systemd start docker
+ 1012  service start docker
+ 1013  service docker start
+ 1014  docker start
+ 1015  docker
+ 1016  docker-compose up -d
+ 1017  service docker start
+ 1018  systemctl restart docker.service
+ 1019  uname -a
+ 1020  docker --version
+ 1021  docker info
+ 1022  sudo service docker start
+ 1023  sudo systemctl start docker
+ 1024  journalctl -u docker
+ 1025  cat /usr/lib/systemd/system/docker.service
+ 1026  sudo systemctl daemon-reload
+ 1027  sudo systemctl start docker
+ 1028  cat /usr/lib/systemd/system/docker.service
+ 1029  [Unit]
+ 1030  Description=Docker Application Container Engine
+ 1031  Documentation=http://docs.docker.com
+ 1032  After=network.target
+ 1033  Wants=docker-storage-setup.service
+ 1034  Requires=rhel-push-plugin.socket
+ 1035  Requires=docker-cleanup.timer
+ 1036  [Service]
+ 1037  Type=notify
+ 1038  NotifyAccess=all
+ 1039  EnvironmentFile=-/etc/sysconfig/docker
+ 1040  EnvironmentFile=-/etc/sysconfig/docker-storage
+ 1041  EnvironmentFile=-/etc/sysconfig/docker-network
+ 1042  Environment=GOTRACEBACK=crash
+ 1043  Environment=DOCKER_HTTP_HOST_COMPAT=1
+ 1044  Environment=PATH=/usr/libexec/docker:/usr/bin:/usr/sbin
+ 1045  ExecStart=/usr/bin/dockerd-current           --add-runtime docker-runc=/usr/libexec/docker/docker-runc-current           --default-runtime=docker-runc           --authorization-plugin=rhel-push-plugin           --exec-opt native.cgroupdriver=systemd           --userland-proxy-path=/usr/libexec/docker/docker-proxy-current           $OPTIONS           $DOCKER_STORAGE_OPTIONS           $DOCKER_NETWORK_OPTIONS           $ADD_REGISTRY           $BLOCK_REGISTRY           $INSECURE_REGISTRY
+ 1046  ExecReload=/bin/kill -s HUP $MAINPID
+ 1047  LimitNOFILE=1048576
+ 1048  LimitNPROC=1048576
+ 1049  LimitCORE=infinity
+ 1050  TimeoutStartSec=0
+ 1051  Restart=on-abnormal
+ 1052  MountFlags=slave
+ 1053  [Install]
+ 1054  nano /usr/lib/systemd/system/docker.service
+ 1055  sudo systemctl daemon-reload
+ 1056  sudo systemctl start docker
+ 1057  sudo systemctl status network.target
+ 1058  sudo systemctl status docker-storage-setup.service
+ 1059  sudo systemctl status rhel-push-plugin.socket
+ 1060  sudo systemctl list-units --type=service
+ 1061  sudo systemctl list-units --type=service | grep dock
+ 1062  curl -sSL https://get.docker.com/ | sh
+ 1063  docker-compose up -d
+ 1064  sudo service docker start
+ 1065  curl -sSL https://get.docker.com/ | sh
+ 1066  yum remove docker*
+ 1067  yum uninstall docker*
+ 1068  yum uninstall docker
+ 1069  yum --help
+ 1070  yum erase docker*
+ 1071  yum reinstall docker
+ 1072  yum search docker
+ 1073  systemctl --list-units-all
+ 1074  systemctl -list-units-all
+ 1075  systemctl 
+ 1076  systemctl list-unit-files
+ 1077  systemctl enable docker.service
+ 1078  systemctl start docker.service
+ 1079  systemctl list-unit-files
+ 1080  service start docker.service
+ 1081  service docker.service start
+ 1082  systemctl status docker
+ 1083  sudo service docker start
+ 1084  sudo systemctl start docker
+ 1085  journalctl -u docker
+ 1086  cat /usr/lib/systemd/system/docker.service
+ 1087  sudo systemctl daemon-reload
+ 1088  sudo systemctl start docker
+ 1089  sudo systemctl status network.target
+ 1090  sudo systemctl status docker-storage-setup.service
+ 1091  yum install docker-storage-setup
+ 1092  systemctl list-unit-files
+ 1093  sudo systemctl list-units --type=service
+ 1094* sudo systemctl docker
+ 1095  sudo systemctl list-units --type=service | grep doc
+ 1096  yum install docker.io
+ 1097  sudo yum remove docker                   docker-client                   docker-client-latest                   docker-common                   docker-latest                   docker-latest-logrotate                   docker-logrotate                   docker-engine
+ 1098  sudo yum install -y yum-utils
+ 1099  sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+ 1100  sudo yum install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+ 1101  docker-compose up -d
+ 1102  sudo systemctl list-units --type=service
+ 1103  sudo systemctl list-units --type=service | grep doc
+ 1104  sudo systemctl start docker
+ 1105  docker-compose up -d
+ 1106  history > docker-install.log
